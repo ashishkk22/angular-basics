@@ -1,0 +1,12 @@
+<input (keyup)="changeImage($event)" [value]="imgURL" />
+
+<app-post [img]="imgURL" (imgSelected)="logImg($event)"
+  >Mayank Kachhadiya this is the caption
+</app-post>
+
+<h1>Hello World {{ name | titlecase }}</h1>
+<h1>Hello World {{ getName() }}</h1>
+<p>{{ currentDate | date : "MMMM d" }}</p>
+<p>{{ currentDate | date : "shortDate" }}</p>
+<p>{{ cost | currency : "INR" }}</p>
+<p>{{ temperature | number : "1.0-0" }}</p>
