@@ -13,6 +13,7 @@ export class AppComponent {
   currentDate = new Date();
   cost = 2200;
   temperature = 22.522;
+  blueClass = false;
   getName() {
     return this.name;
   }

@@ -29,7 +29,7 @@ export class PostComponent
     AfterViewInit,
     OnDestroy
 {
-  @Input('img') postImg = ''; //here we are setting the alias as img but we should not add remembering many names leads to confution
+  @Input('img') postImg = ''; //here we are setting the alias as img but we should not add remembering many names leads to confusion
   @Output() imgSelected = new EventEmitter<string>();
   constructor() {
     console.log('hii constructor called');
