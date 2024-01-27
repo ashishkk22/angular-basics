@@ -1,3 +1,12 @@
+<ng-template [ngIf]="blueClass">
+  <p>Button is blue</p>
+</ng-template>
+
+<!-- we can write the below statement instead of the above statement  -->
+<!-- short syntax -->
+<p *ngIf="blueClass">Huii this is the new syntax</p>
+<!-- <div>ngIf directive => structural directive</div> -->
+
 <button
   (click)="blueClass = !blueClass"
   [ngClass]="{ blue: blueClass }"
@@ -9,8 +18,11 @@
 <hr />
 <input (keyup)="changeImage($event)" [value]="imgURL" />
 
-<app-post [img]="imgURL" (imgSelected)="logImg($event)"
-  >Mayank Kachhadiya this is the caption
+<app-post
+  *ngFor="let image of images; let i = index"
+  [img]="image"
+  (imgSelected)="logImg($event)"
+  >Mayank Kachhadiya this is the caption {{ i }}
 </app-post>
 
 <h1>Hello World {{ name | titlecase }}</h1>
