@@ -14,6 +14,7 @@ export class AppComponent {
   cost = 2200;
   temperature = 22.522;
   blueClass = false;
+  fontSize = 3;
   getName() {
     return this.name;
   }
